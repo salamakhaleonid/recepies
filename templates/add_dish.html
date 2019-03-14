@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container justify-content-center" style="text-align: center;background-color:rgba(169, 138, 112, 1);width:100%;height:600px;padding: 50px 50px 50px 50px;">
+  <form method="post">
+    <label for="dish_name">Dish name</label><br>
+    <input name="dish_name" id="dish_name" required style="width:80%;"><br>
+    <label for="ingredients">Ingredients</label><br>
+    <textarea name="ingredients" id="ingredients" required style="width:80%;"></textarea><br>
+    <label for="preparation">Preparation</label><br>
+    <textarea name="preparation" id="preparation" required style="width:80%;"></textarea><br>
+    <label for="image">Load image</label>
+    <input type="file" name="image" id="image" required><br>
+      <br>
+    <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+      <br>
+    <input type="submit" value="Add Dish" style="width:80%;"><br>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+body
+{
+    font-family:"HelveticaNeue";
+}
+
+ a {
+    color: black;}
+   a:visited {
+    color: black;}
+   a:active {
+    color: black;  
+         }
+   a:hover {
+  text-decoration: none;}
+
+
+
+.frame {
+   position: relative;
+   z-index: 0;
+   background-color: gray;
+}
+
+.text_box {
+	padding-top: 0%;
+	color: white;
+    position: absolute;
+	top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.get_started_btn {
+	background-color: transparent;
+	border-color: white;
+	border-radius: 0rem;
+	padding: .35rem 7rem;
+    font-size: calc(16px + 1vw)
+    line-height: 3;
+}
+
+.card-img-top {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.image_container{
+	position: relative;
+	overflow: hidden;
+}
+
+.text_container{
+	padding-top: 30%;
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.image-cropper {
+	background-color: red;
+	/*margin-top: 10%;*/
+    width: 400px;
+    /*overflow: hidden;*/
+    /*border-radius: 50%;*/
+	/*display: block;*/
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+.text-cropper {
+	/*background-color: red;*/
+	/*padding-top: 3%;*/
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    /*border-radius: 50%;*/
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

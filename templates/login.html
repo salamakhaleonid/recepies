@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container justify-content-center" style="text-align: center;background-color:rgba(169, 138, 112, 1);width:300px;height:300px;padding: 50px 50px 50px 50px;">
+  <form method="post">
+    <label for="username">Username</label><br>
+    <input name="username" id="username" required><br>
+    <label for="password">Password</label><br>
+    <input type="password" name="password" id="password" required><br>
+    <input type="submit" value="Log In"><br>
+  </form>
+</div>
+{% endblock %}

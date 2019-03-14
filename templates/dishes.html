@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+<div class="frame">
+	<img src="{{url_for('static', filename='images/bg.jpg')}}" alt="placeholder" class="img-fluid" />
+  <div class="text_box">
+  	<!-- <h2 style="font-size: calc(16px + 1.5vw); font-style: italic;  font-weight: bold;" class = "d-none d-md-block text-uppercase"> Знайди Свій Улюблений</h2> -->
+  		<br class="d-none d-md-block">
+  	<h1 style="font-size: calc(16px + 2.5vw); font-weight: bold;" > РЕЦЕПТИ   </h1>
+  	<br class="d-none d-md-block">
+  	<p><a class="btn btn-primary get_started_btn"  style= "font-weight: bold; color: white;" href="/">Знайти</a></p>
+  		<br class="d-none d-md-block">
+  	<p><a class="btn btn-primary get_started_btn"  style= "font-weight: bold; color: white;" href="/add_dish">Додати</a></p>
+  	<br>
+  	<p  class="d-none d-md-block" style="font-size: calc(16px + 0.5vw);  font-weight: bold;">ДОДАЙ СВІЙ ЩОБ ОТРИМАТИ ЦІННІ ПОДАРУНКИ!</p>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="container">
+<div class="d-flex flex-wrap justify-content-center ">
+{% for dish in dishes_list %}
+    <!--You can select <a href="/departments/{{loop.index}}"> {{ d }} </a>-->
+<div class="card border-light" style="width: 275px; height:310px; margin: 1px 1px 1px 1px"><a href="/dishes/{{dish.id}}">
+  <img class="card-img-top" src="{{url_for('static', filename='images/'+ dish.image_id|string +'.jpg')}}" alt="Card image cap" style=" object-fit: cover; width: 100%; height: 100%; ">
+  <div class="card-body">
+    <p class="card-text text-uppercase">{{dish.dish_name}} </p>
+  </div></a>
+</div>
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}
